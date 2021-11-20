@@ -12,35 +12,21 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 
+// 100, 121, 144, 169, 196, 225
+:root {
+  --universal_width: 81vw;
+  --universal_background_color: rgba(196, 169, 49, .64);
+  --universal_white_opacity: rgba(225, 225, 225, 0.49);
+}
+
 * 
 {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-header.php 
-{
-  width: 81%;
-  margin: 0 auto;
-  padding-left: 1px;
-  padding-top: 2px;
-  padding-right: 2px;
-  padding-bottom: 4px;
-  background-color: aliceblue;
-  text-align: center;
-  color: black;
-
-  & h1 a {
-    text-decoration: none;
-    font-size: 49px;
-    color: burlywood;
-  }
-
-  & h2 {
-    font-size: 36px;
-    color: black;
-  }
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  color: #12345678;
 }
 
 body.body-class 
@@ -48,17 +34,138 @@ body.body-class
   // Body class is from the default php method assigmnet
   height: 100vh;
   width: 100vw;
-  color: #4444;
-  font-family: "Raleway", sans-serif !important;
-  font-size: 16px !important;
+  background-color: var(--universal_background_color);
+}
+
+header.php 
+{
+  width: var(--universal_width);
+  height: fit-content;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  & div.welcoming_card_1 
+  {
+    width: 49%;
+    min-width: 256px;
+    margin-left: 16px;
+    background-color: var(--universal_white_opacity);
+
+    border-radius: 16px;
+    border-bottom: 4px solid var(--universal_white_opacity);
+    // border-right: 4px solid var(--universal_white_opacity);
+    box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.16);
+
+    & h1 
+    {
+      & a
+      {
+        text-decoration: none;
+        font-size: 49px;
+        color: rgba(225, 196, 169, .81);
+      }
+    }
+
+    padding: 16px;
+  }
+
+  & div.welcoming_card_2 
+  {
+    width: 49%;
+    min-width: 256px;
+    margin-top: 81px;
+    margin-left: 64px;
+    background-color: var(--universal_white_opacity);
+
+    border-radius: 16px;
+    border-bottom: 4px solid var(--universal_white_opacity);
+    // border-right: 4px solid var(--universal_white_opacity);
+    box-shadow: 4px 9px 16px rgba(0, 0, 0, 0.16);
+
+    & h2 
+    {
+      font-size: 36px;
+    }
+
+    padding: 16px;
+  }
+
+  margin: 0 auto;
+  background-color: var(--universal_white_opacity);
+  text-align: center;
+  color: black;
+
+  padding-top: 16px;
+  padding-bottom: 25px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  border-radius: 16px;
+  border-left: 4px solid var(--universal_white_opacity);
+  border-right: 4px solid var(--universal_white_opacity);
+  box-shadow: 4px 9px 16px rgba(0, 0, 0, 0.16);
+}
+
+section.site_indexes 
+{
+  width: var(--universal_width);
+  margin: 0 auto;
+  padding-top: 100px;
+
+  & div.site_index_list
+  {
+    background-color: var(--universal_white_opacity);
+    height: 64px;
+    width: 50%;
+    padding-left: 16px;
+    padding-right: 16px;
+
+    border-radius: 16px;
+    border-left: 4px solid var(--universal_white_opacity);
+    border-right: 4px solid var(--universal_white_opacity);
+    box-shadow: 16px 25px 36px rgba(0, 0, 0, 0.16);
+
+    & ul
+    {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+
+      & li
+      {
+        // Can changes this individually with n child or classes
+        padding-top: 25px;
+
+        & a
+        {
+          text-decoration: none;
+          padding-top: 16px;
+          padding-left: 9px;
+          padding-bottom: 16px;
+          padding-right: 9px;
+          background-color: var(--universal_white_opacity);
+
+          border-radius: 16px;
+          border-left: 1px solid var(--universal_white_opacity);
+          border-right: 1px solid var(--universal_white_opacity);
+          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.16);
+
+          font-weight: 625;
+        }
+      }
+    }
+  }
+
 }
 
 main.php 
 {
-  height: 100%;
-  width: 49%;
-  margin: 0px auto;
-  padding-top: 3px;
+  height: fit-content;
+  width: 81%;
+  margin: 0 auto;
+  padding-top: 256px;
   padding-bottom: 9px;
 
   display: grid;

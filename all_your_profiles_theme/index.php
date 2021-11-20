@@ -1,26 +1,4 @@
-<!-- These are just notes written by the Theme Developer (Eric) #
-    
-<h1><?= the_title(); ?></h1>
-
-<h2><?= 
-
-// Instructs php to get the blog data from the database ("user friendly")
-// Wordpress stores it all via MySQL in such a way that this can get sections to build the site.
-bloginfo("description");
-
-?></h2>
-
-<h3><a href="<?= bloginfo("url"); ?>">Return.</a></h3> -->
-
-<!-- The admin object is assigned to the footer. There are many pieces of metadata included in the
-base assumption of the original object. Changing it with a custom one cleans the HTML -->
-
-<!--
---
---
---
---
--->
+<!-- Copyright 2021 Eric Dee. All rights reserved. -->
 
 <?= get_header(); ?>
 
@@ -35,12 +13,12 @@ base assumption of the original object. Changing it with a custom one cleans the
 <?php
     echo '<section class="php_wordpress_posts">';
 
-        // To allow more posts to load, change the Settings item in Reading called 'Blog pages show at most'.
+        // To allow loading of additional posts change Settings > Reading > 'Blog pages show at most'.
         if (have_posts()):
 
             while (have_posts()):
             
-                // First fetch the post data in order to tie the delegates
+                // Iterates through each post, and calls its fetch method to use its data
                 the_post();
 
                 echo '<article '; post_class(); echo ' ';
