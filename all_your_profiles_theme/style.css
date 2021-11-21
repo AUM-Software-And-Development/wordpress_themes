@@ -25,6 +25,7 @@
   font-size: 16px;
   font-family: "Raleway", sans-serif;
   color: #12345678;
+  border: none;
 }
 
 body.body-class {
@@ -100,6 +101,22 @@ header.php div.welcoming_card_2 h2 {
   font-weight: 625;
 }
 
+header.php section.blog_button {
+  margin-top: 81px;
+}
+
+header.php section.blog_button button {
+  width: 121px;
+  height: 49px;
+  background-color: rgba(225, 64, 49, 0.81);
+  font-weight: 625;
+  color: white;
+  border-radius: 16px;
+  border-left: 4px solid var(--universal_outline_white_opacity);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.16);
+          box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.16);
+}
+
 header.php section.logos {
   margin-top: 144px;
 }
@@ -107,6 +124,32 @@ header.php section.logos {
 header.php section.logos img {
   height: auto;
   width: 100%;
+  -webkit-animation: animate 16s linear infinite;
+          animation: animate 16s linear infinite;
+}
+
+@-webkit-keyframes animate {
+  0%,
+  100% {
+    -webkit-transform: translateY(175px);
+            transform: translateY(175px);
+  }
+  50% {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    -webkit-transform: translateY(175px);
+            transform: translateY(175px);
+  }
+  50% {
+    -webkit-transform: translateY(1px);
+            transform: translateY(1px);
+  }
 }
 
 section.site_indexes {

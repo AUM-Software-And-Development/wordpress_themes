@@ -28,6 +28,7 @@
   font-size: 16px;
   font-family: "Raleway", sans-serif;
   color: #12345678;
+  border: none;
 }
 
 body.body-class 
@@ -93,6 +94,24 @@ header.php
     padding: 16px;
   }
 
+  & section.blog_button 
+  {
+    margin-top: 81px;
+
+    & button 
+    {
+      width: 121px;
+      height: 49px;
+      background-color: rgba(225, 64, 49, 0.81);
+      font-weight: 625;
+      color: white;
+
+      border-radius: 16px;
+      border-left: 4px solid var(--universal_outline_white_opacity);
+      box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.16);
+    }
+  }
+
   & section.logos 
   {
     margin-top: 144px;
@@ -101,6 +120,16 @@ header.php
     {
       height: auto;
       width: 100%;
+      animation: animate 16s linear infinite;
+      @keyframes animate {
+        0%,
+        100% {
+          transform: translateY(175px);
+        }
+        50% {
+          transform: translateY(1px);
+        }
+      }
     }
   }
 
@@ -149,7 +178,7 @@ section.site_indexes
 
       & li
       {
-        // Can changes this individually with n child or classes
+        // Can change this individually with n child or classes
         padding-top: 25px;
 
         & a
@@ -172,7 +201,6 @@ section.site_indexes
       }
     }
   }
-
 }
 
 main.php 

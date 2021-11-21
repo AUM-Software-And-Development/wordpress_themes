@@ -32,19 +32,25 @@
             </div>
         </section>
 
-        <section class="logos">
-            <img src="<?php bloginfo('template_directory'); ?>/images/styled_rock.png" alt="Your browser did not display this image of a rock." />
-        </section>
+        <div class="directional_flexed_items">
+            <section class="blog_button">
+                <button>Drop Down</button>
+            </section>
+
+            <section class="logos">
+                <img src="<?php bloginfo('template_directory'); ?>/images/styled_rock.png" alt="Your browser did not display this image of a rock." />
+            </section>
+        </div>
     
     </header>
 
     <section class="site_indexes">
         <div class="site_index_list">
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Team</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">View All</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Reddit</a></li>
             </ul>
         </div>
     </section>
