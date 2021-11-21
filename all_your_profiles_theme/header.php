@@ -19,15 +19,23 @@
 <body <?= body_class("body-class"); ?>>
 
     <header class="php">
-        <div class="welcoming_card_1">
-            <h1> <a href="<?= bloginfo('url'); ?>"> <?= bloginfo('name'); ?> </a></h1>
-            <p><?= bloginfo('description'); ?></p>
-        </div>
     
-        <div class="welcoming_card_2">
-            <h2>Test header</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequuntur temporibus ad officia rem id quod, error assumenda dolorem eveniet repellendus? Necessitatibus nulla voluptate, fuga aliquid ab inventore voluptas aliquam?</p>
-        </div>
+        <section class="welcoming_cards">
+            <div class="welcoming_card_1">
+                <h1> <a href="<?= bloginfo('url'); ?>"> <?= bloginfo('name'); ?> </a></h1>
+                <p><?= bloginfo('description'); ?></p>
+            </div>
+    
+            <div class="welcoming_card_2">
+                <h2>Test header</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus consequuntur temporibus ad officia rem id quod, error assumenda dolorem eveniet repellendus? Necessitatibus nulla voluptate, fuga aliquid ab inventore voluptas aliquam?</p>
+            </div>
+        </section>
+
+        <section class="logos">
+            <img src="<?php bloginfo('template_directory'); ?>/images/styled_rock.png" alt="Your browser did not display this image of a rock." />
+        </section>
+    
     </header>
 
     <section class="site_indexes">
